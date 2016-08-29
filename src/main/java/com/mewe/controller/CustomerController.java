@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.mewe.model.Customer;
 import com.mewe.service.CustomerService;
 
+
+
 @Controller
 public class CustomerController {
 	
@@ -29,7 +31,10 @@ public class CustomerController {
 	}
 	@RequestMapping(value="/add", method=RequestMethod.GET)
 	public String newCustomer(@ModelAttribute("newCustomer") Customer customer){
+		
 		return "addCustomer";
+		
+		
 	}
 	@RequestMapping(value="/save", method=RequestMethod.POST)
 	public String saveCustomer(@Valid @ModelAttribute("newCustomer") Customer customer, BindingResult bindingResult){
@@ -49,6 +54,10 @@ public class CustomerController {
 		Customer customer = customerService.getCustomer(id);
 		model.addAttribute("editCustomerv1", customer);
 		return "editCustomer";
+		
+		
+		
+		
 	}
 	@RequestMapping(value="/update", method=RequestMethod.POST)
 	public String updateCustomer(@Valid @ModelAttribute("editCustomerv1") Customer customer, BindingResult bindingResult){
