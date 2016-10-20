@@ -12,5 +12,12 @@
 <br/>
 <input type="submit" value = "Start"/>
 </form>
+
+<form action = "webservicePage" method = "get">
+<p>Start webservice .......</p>
+<br/>
+<input type="submit" value = "ClickMe"/>
+</form>
+
 </body>
 </html>

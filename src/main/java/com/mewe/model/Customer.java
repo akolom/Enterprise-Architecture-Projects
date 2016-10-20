@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.Past;
 
@@ -30,6 +31,7 @@ public class Customer {
 	@Past
 	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
+
 	@NotEmpty
 	@Length(min=3, max=30)
 	private String placeOfBirth;
